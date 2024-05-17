@@ -1,0 +1,23 @@
+﻿<Window x:Class="Task3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="150" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" MinWidth="150"/>
+            <ColumnDefinition Width="*" MinWidth="150"/>
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="ClassComboBox" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding nameClass}" Margin="10"/>
+        <ComboBox x:Name="MetodsComboBox" Grid.Row="0" Grid.Column="1" ItemsSource="{Binding Path=metodsClass}" Margin="10"/>
+        <Button x:Name="ButtonCreateClass" Grid.Row="2" Grid.ColumnSpan="1"  Margin="5" Content="Создать" Width="100" Height="40" Click="createClass" RenderTransformOrigin="0.686,0.653"/>
+        <Button x:Name="ButtonSelectMethod" Grid.Row="2" Grid.ColumnSpan="2"  Margin="200,5,200,5" Content="Выбрать метод" Width="100" Height="40" Click="selectMethod" RenderTransformOrigin="0.686,0.653"/>
+        <Button Grid.Row="2"  Margin="75,5,75,5" Content="Сведения" Width="100" Height="40" Click="checkClass"  Grid.Column="1" RenderTransformOrigin="0.503,0.46"/>
+    </Grid>
+</Window>
